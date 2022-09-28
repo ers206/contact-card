@@ -1,3 +1,6 @@
+import {initdb, postDb, deleteDb, editDb} from './database'; 
+// import { initdb } from './database';
+
 import "./form";
 import "./submit";
 import { Tooltip, Toast, Popover } from 'bootstrap'; 
@@ -7,7 +10,8 @@ import Logo from '../images/logo.png';
 import Bear from '../images/bear.png';
 import Dog from '../images/dog.png';
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
+    initdb();
     document.getElementById('logo').src = Logo;
     document.getElementById('bearThumbnail').src = Bear;
     document.getElementById('dogThumbnail').src = Dog;
